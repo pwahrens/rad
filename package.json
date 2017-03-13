@@ -4,7 +4,8 @@
   "dependencies": {
     "osc": "2.2.x",
     "express": "4.15.x",
-    "socket.io": "1.7.x"
+    "socket.io": "1.7.x",
+    "ejs": "2.5.x"
   },
   "scripts": {
     "start": "node server.js"
