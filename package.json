@@ -1,0 +1,12 @@
+{
+  "name": "laptop-orchestra",
+  "version": "1.0.0",
+  "dependencies": {
+    "osc": "2.2.x",
+    "express": "4.15.x",
+    "socket.io": "1.7.x"
+  },
+  "scripts": {
+    "start": "node server.js"
+  }
+}
