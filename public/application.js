@@ -47,8 +47,9 @@ function startup(app, page) {
         var bttn5 = 0;
         var bttn6 = 0;
 
-        var port = window.location.port;
-        var socket = io(window.location.hostname+":"+ ++port);
+        var port = window.location.port; //website port TODO
+        var socket = io(window.location.hostname+":"+ ++port); //socket port needs to be different than website port? TODO
+
         socket.on("connect", function () {
             document.getElementById("song-button-1").onclick = function () {
                 socket.emit("button_click_1");
@@ -162,7 +163,7 @@ function objectControl() {
         menuClose(menu);
     });
     window.addEventListener("resize", function () {
-        if (button.css("display") == "none") { //TODO reduce the redundancy of this function in particular
+        if (button.css("display") == "none") {
             menu.css("transform", "translateX(0)");
             cover.css("opacity", "0");
             html.css("overflow", "");
