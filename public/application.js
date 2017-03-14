@@ -47,7 +47,8 @@ function startup(app, page) {
         var bttn5 = 0;
         var bttn6 = 0;
 
-        var socket = io.connect("https://sdpmp.herokuapp.com/");//TODO: get this to connect to the site properly
+        var server = "http://localhost:" + process.env.PORT;
+        var socket = io.connect(server);
         socket.on("connect", function () {
             document.getElementById("song-button-1").onclick = function () {
                 socket.emit("button_click_1");
