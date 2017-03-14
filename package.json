@@ -5,9 +5,16 @@
     "osc": "2.2.x",
     "express": "4.15.x",
     "socket.io": "1.7.x",
+    "yuicompressor": "2.4.x",
     "ejs": "2.5.x"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/pwahrens/laptop-orchestra"
+  },
+  "license": "MIT",
   "scripts": {
     "start": "node server.js"
   }
 }
+
