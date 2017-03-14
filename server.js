@@ -3,7 +3,7 @@
  Edited my miguel 3-10-2017
  */
 var osc = require("osc");
-WebSocket = require("ws");
+//WebSocket = require("ws");
 var express = require('express');
 var http = require("http");
 var app = express();
@@ -75,6 +75,7 @@ udpPort.on("ready", function () {
 // Open the socket.
 udpPort.open();
 
+/*
 var wss = new WebSocket.Server({
     port: 8080
 });
@@ -89,7 +90,7 @@ wss.on("connection", function (socket) {
         raw: true
     });
 });
-
+*/
 var bttn1 = 0;
 var bttn2 = 0;
 var bttn3 = 0;
