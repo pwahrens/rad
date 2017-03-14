@@ -15,7 +15,8 @@ var mime = require("mime");
 var exec = require("child_process").exec
 
 app.set('port', (process.env.PORT || 5000));
-app.listen(app.get('port'));
+
+server.listen(app.get('port') + 1);
 
 app.use(express.static(__dirname + '/public'));
 
