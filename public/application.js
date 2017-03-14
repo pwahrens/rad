@@ -232,275 +232,275 @@ function finalModifications() {
     $("#bottom-filler").appendTo("#container");
 }
 /*
-function vegetarianBarGraph() {
-    $('#vegetarian-bar-graph').highcharts({
-        chart: {
-            reflow: false,
-            style: {
-                fontFamily: 'Roboto, sans-serif'
-            },
-            type: 'column'
-        },
-        title: {
-            text: 'Reasoning behind becoming vegetarian'
-        },
-        subtitle: {
-            text: 'Source: www.statisticbrain.com/',
-            x: -20
-        },
-        xAxis: {
-            type: 'category'
-        },
-        yAxis: {
-            title: {
-                text: 'Percentage of individuals'
-            }
+ function vegetarianBarGraph() {
+ $('#vegetarian-bar-graph').highcharts({
+ chart: {
+ reflow: false,
+ style: {
+ fontFamily: 'Roboto, sans-serif'
+ },
+ type: 'column'
+ },
+ title: {
+ text: 'Reasoning behind becoming vegetarian'
+ },
+ subtitle: {
+ text: 'Source: www.statisticbrain.com/',
+ x: -20
+ },
+ xAxis: {
+ type: 'category'
+ },
+ yAxis: {
+ title: {
+ text: 'Percentage of individuals'
+ }
 
-        },
-        legend: {
-            enabled: false
-        },
-        plotOptions: {
-            series: {
-                borderWidth: 0,
-                dataLabels: {
-                    enabled: true,
-                    format: '{point.y:.1f}%'
-                }
-            }
-        },
+ },
+ legend: {
+ enabled: false
+ },
+ plotOptions: {
+ series: {
+ borderWidth: 0,
+ dataLabels: {
+ enabled: true,
+ format: '{point.y:.1f}%'
+ }
+ }
+ },
 
-        tooltip: {
-            headerFormat: '<span style="font-size:11px">{series.name}</span><br>',
-            pointFormat: '<span style="color:{point.color}">{point.name}</span>: <b>{point.y:.2f}%</b> of total<br/>'
-        },
-        series: [{
-            name: 'Reasons',
-            colorByPoint: true,
-            data: [{
-                name: 'Animal welfare',
-                y: 54,
-                color: '#2196F3'
-            }, {
-                name: 'Improve overall health',
-                y: 53,
-                color: '#000000'
-            }, {
-                name: 'Environmental concerns',
-                y: 47,
-                color: '#4CAF50'
-            }, {
-                name: 'Natural approach to wellness',
-                y: 39,
-                color: '#FF9800'
-            }, {
-                name: 'Food-safety concerns',
-                y: 31,
-                color: '#9C27B0'
-            }, {
-                name: 'Weight loss',
-                y: 25,
-                color: '#F44336'
-            }, {
-                name: 'Weight maintenance',
-                y: 24,
-                color: '#FFEB3B'
-            }]
-        }],
-    });
-}
-function pieChart() {
-    $('#pie-chart').highcharts({
-        chart: {
-            reflow: false,
-            style: {
-                fontFamily: 'Roboto, sans-serif'
-            },
-            plotBackgroundColor: null,
-            plotBorderWidth: null,
-            plotShadow: false,
-            type: 'pie'
-        },
-        title: {
-            text: 'Diet statistics in America during 2012'
-        },
-        subtitle: {
-            text: 'Source: www.vegetariantimes.com/',
-            x: -20
-        },
-        tooltip: {
-            pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
-        },
-        plotOptions: {
-            pie: {
-                allowPointSelect: true,
-                cursor: 'pointer',
-                dataLabels: {
-                    enabled: false
-                },
-                showInLegend: true
-            }
-        },
-        series: [{
-            name: 'Diets',
-            colorByPoint: true,
-            data: [{
-                name: 'Everyone else',
-                y: 86.3,
-                color: '#F44336'
-            }, {
-                name: 'Vegetarian-inclined',
-                y: 10,
-                sliced: true,
-                selected: true,
-                color: '#4CAF50'
-            }, {
-                name: 'Vegetarian',
-                y: 3.2,
-                color: '#2196F3'
-            }, {
-                name: 'Vegan',
-                y: 0.5,
-                color: '#FFEB3B'
-            }]
-        }]
-    });
-}
+ tooltip: {
+ headerFormat: '<span style="font-size:11px">{series.name}</span><br>',
+ pointFormat: '<span style="color:{point.color}">{point.name}</span>: <b>{point.y:.2f}%</b> of total<br/>'
+ },
+ series: [{
+ name: 'Reasons',
+ colorByPoint: true,
+ data: [{
+ name: 'Animal welfare',
+ y: 54,
+ color: '#2196F3'
+ }, {
+ name: 'Improve overall health',
+ y: 53,
+ color: '#000000'
+ }, {
+ name: 'Environmental concerns',
+ y: 47,
+ color: '#4CAF50'
+ }, {
+ name: 'Natural approach to wellness',
+ y: 39,
+ color: '#FF9800'
+ }, {
+ name: 'Food-safety concerns',
+ y: 31,
+ color: '#9C27B0'
+ }, {
+ name: 'Weight loss',
+ y: 25,
+ color: '#F44336'
+ }, {
+ name: 'Weight maintenance',
+ y: 24,
+ color: '#FFEB3B'
+ }]
+ }],
+ });
+ }
+ function pieChart() {
+ $('#pie-chart').highcharts({
+ chart: {
+ reflow: false,
+ style: {
+ fontFamily: 'Roboto, sans-serif'
+ },
+ plotBackgroundColor: null,
+ plotBorderWidth: null,
+ plotShadow: false,
+ type: 'pie'
+ },
+ title: {
+ text: 'Diet statistics in America during 2012'
+ },
+ subtitle: {
+ text: 'Source: www.vegetariantimes.com/',
+ x: -20
+ },
+ tooltip: {
+ pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+ },
+ plotOptions: {
+ pie: {
+ allowPointSelect: true,
+ cursor: 'pointer',
+ dataLabels: {
+ enabled: false
+ },
+ showInLegend: true
+ }
+ },
+ series: [{
+ name: 'Diets',
+ colorByPoint: true,
+ data: [{
+ name: 'Everyone else',
+ y: 86.3,
+ color: '#F44336'
+ }, {
+ name: 'Vegetarian-inclined',
+ y: 10,
+ sliced: true,
+ selected: true,
+ color: '#4CAF50'
+ }, {
+ name: 'Vegetarian',
+ y: 3.2,
+ color: '#2196F3'
+ }, {
+ name: 'Vegan',
+ y: 0.5,
+ color: '#FFEB3B'
+ }]
+ }]
+ });
+ }
 
-function accelerometer() {
-    if (window.DeviceMotionEvent != undefined) {
-        var aX = $("#acceleration-x");
-        var aY = $("#acceleration-y");
-        var aZ = $("#acceleration-z");
-        var rA = $("#rotation-alpha");
-        var rB = $("#rotation-beta");
-        var rG = $("#rotation-gamma");
-        var accelerationX;
-        var accelerationY;
-        var accelerationZ;
-        var rotationAlpha;
-        var rotationBeta;
-        var rotationGamma;
+ function accelerometer() {
+ if (window.DeviceMotionEvent != undefined) {
+ var aX = $("#acceleration-x");
+ var aY = $("#acceleration-y");
+ var aZ = $("#acceleration-z");
+ var rA = $("#rotation-alpha");
+ var rB = $("#rotation-beta");
+ var rG = $("#rotation-gamma");
+ var accelerationX;
+ var accelerationY;
+ var accelerationZ;
+ var rotationAlpha;
+ var rotationBeta;
+ var rotationGamma;
 
-        window.ondevicemotion = function (e) {
-            accelerationX = e.accelerationIncludingGravity.x;
-            accelerationY = e.accelerationIncludingGravity.y;
-            accelerationZ = e.accelerationIncludingGravity.z;
-            rotationAlpha = e.rotationRate.alpha;
-            rotationBeta = e.rotationRate.beta;
-            rotationGamma = e.rotationRate.gamma;
+ window.ondevicemotion = function (e) {
+ accelerationX = e.accelerationIncludingGravity.x;
+ accelerationY = e.accelerationIncludingGravity.y;
+ accelerationZ = e.accelerationIncludingGravity.z;
+ rotationAlpha = e.rotationRate.alpha;
+ rotationBeta = e.rotationRate.beta;
+ rotationGamma = e.rotationRate.gamma;
 
-            aX.text(accelerationX);
-            aY.text(accelerationY);
-            aZ.text(accelerationZ);
+ aX.text(accelerationX);
+ aY.text(accelerationY);
+ aZ.text(accelerationZ);
 
-            if (e.rotationRate) {
-                rA.text(rotationAlpha);
-                rB.text(rotationBeta);
-                rG.text(rotationGamma);
-            }
+ if (e.rotationRate) {
+ rA.text(rotationAlpha);
+ rB.text(rotationBeta);
+ rG.text(rotationGamma);
+ }
 
-        }
-        $('#laptop-orchestra-bar-graph').highcharts({
-            chart: {
-                reflow: false,
-                style: {
-                    fontFamily: 'Roboto, sans-serif'
-                },
-                polar: true,
-                animation: Highcharts.svg, // don't animate in old IE
-                events: {
-                    load: function () {
-                        var series = this.series[0];
-                        setInterval(function () {
-                            if (accelerationX != null) {
-                                series.data[0].update(accelerationX);
-                            } else {
-                                series.data[0].update(Math.random());
-                            }
-                            if (accelerationY != null) {
-                                series.data[1].update(accelerationY);
-                            } else {
-                                series.data[1].update(Math.random());
-                            }
-                            if (accelerationZ != null) {
-                                series.data[2].update(accelerationZ);
-                            } else {
-                                series.data[2].update(Math.random());
-                            }
-                            if (rotationAlpha != null) {
-                                series.data[4].update(rotationAlpha);
-                            } else {
-                                series.data[3].update(Math.random());
-                            }
-                            if (rotationBeta != null) {
-                                series.data[4].update(rotationBeta);
-                            } else {
-                                series.data[4].update(Math.random());
-                            }
-                            if (rotationGamma != null) {
-                                series.data[5].update(rotationGamma);
-                            } else {
-                                series.data[5].update(Math.random());
-                            }
-                        }, 166);
-                    }
-                }
-            },
-            pane: {
-                startAngle: -30
-            },
-            plotOptions: {
-                series: {
-                    pointStart: 0,
-                    pointInterval: 60
-                },
-                column: {
-                    pointPadding: 0,
-                    groupPadding: 0
-                }
-            },
-            title: {
-                text: 'Acceleration and rotation data'
-            },
-            xAxis: {
-                categories: ['X', 'Y', 'Z', 'α', 'β', 'γ'],
-            },
-            yAxis: {
-                labels: {enabled: false},
-                gridLineWidth: 0,
-                minorGridLineWidth: 0,
-                title: {
-                    text: ''
-                }
-            },
-            tooltip: {
-                enabled: false
-            },
-            legend: {
-                enabled: false
-            },
-            exporting: {
-                enabled: false
-            },
-            series: [{
-                type: 'column',
-                data: (function () {
-                    var data = [];
-                    var colors = ['#FFEB3B', '#FF9800', '#F44336', '#3F51B5', '#2196F3', '#4CAF50'];
-                    for (var i = 0; i < 6; i++) {
-                        data.push({
-                            x: i,
-                            y: 0,
-                            color: colors[i]
-                        });
-                    }
-                    return data;
-                }())
-            }]
-        });
-    }
-}
+ }
+ $('#laptop-orchestra-bar-graph').highcharts({
+ chart: {
+ reflow: false,
+ style: {
+ fontFamily: 'Roboto, sans-serif'
+ },
+ polar: true,
+ animation: Highcharts.svg, // don't animate in old IE
+ events: {
+ load: function () {
+ var series = this.series[0];
+ setInterval(function () {
+ if (accelerationX != null) {
+ series.data[0].update(accelerationX);
+ } else {
+ series.data[0].update(Math.random());
+ }
+ if (accelerationY != null) {
+ series.data[1].update(accelerationY);
+ } else {
+ series.data[1].update(Math.random());
+ }
+ if (accelerationZ != null) {
+ series.data[2].update(accelerationZ);
+ } else {
+ series.data[2].update(Math.random());
+ }
+ if (rotationAlpha != null) {
+ series.data[4].update(rotationAlpha);
+ } else {
+ series.data[3].update(Math.random());
+ }
+ if (rotationBeta != null) {
+ series.data[4].update(rotationBeta);
+ } else {
+ series.data[4].update(Math.random());
+ }
+ if (rotationGamma != null) {
+ series.data[5].update(rotationGamma);
+ } else {
+ series.data[5].update(Math.random());
+ }
+ }, 166);
+ }
+ }
+ },
+ pane: {
+ startAngle: -30
+ },
+ plotOptions: {
+ series: {
+ pointStart: 0,
+ pointInterval: 60
+ },
+ column: {
+ pointPadding: 0,
+ groupPadding: 0
+ }
+ },
+ title: {
+ text: 'Acceleration and rotation data'
+ },
+ xAxis: {
+ categories: ['X', 'Y', 'Z', 'α', 'β', 'γ'],
+ },
+ yAxis: {
+ labels: {enabled: false},
+ gridLineWidth: 0,
+ minorGridLineWidth: 0,
+ title: {
+ text: ''
+ }
+ },
+ tooltip: {
+ enabled: false
+ },
+ legend: {
+ enabled: false
+ },
+ exporting: {
+ enabled: false
+ },
+ series: [{
+ type: 'column',
+ data: (function () {
+ var data = [];
+ var colors = ['#FFEB3B', '#FF9800', '#F44336', '#3F51B5', '#2196F3', '#4CAF50'];
+ for (var i = 0; i < 6; i++) {
+ data.push({
+ x: i,
+ y: 0,
+ color: colors[i]
+ });
+ }
+ return data;
+ }())
+ }]
+ });
+ }
+ }
  */
 function hexToRgbA(hex, opacity) {
     var c;

@@ -3,7 +3,7 @@
  Edited my miguel 3-10-2017
  */
 var osc = require("osc");
-    WebSocket = require("ws");
+WebSocket = require("ws");
 var express = require("express");
 var socketIO = require("socket.io");
 var http = require("http").createServer(app);
@@ -25,11 +25,11 @@ app.set('views', __dirname + '/views');
 app.set('view engine', 'ejs');
 
 app.get('/', function(request, response) {
-  response.render('index');
+    response.render('index');
 });
 
 app.listen(app.get('port'), function() {
-  console.log('Node app is running on port', app.get('port'));
+    console.log('Node app is running on port', app.get('port'));
 });
 
 
@@ -41,14 +41,14 @@ io.on('connection', function (socket) {
 });
 
 function sendPage(response, filePath, fileContents) {
-  response.writeHead(200, {"Content-type" : mime.lookup(path.basename(filePath))});
-  response.end(fileContents);
+    response.writeHead(200, {"Content-type" : mime.lookup(path.basename(filePath))});
+    response.end(fileContents);
 }
 
 var getIPAddresses = function () {
     var os = require("os"),
-    interfaces = os.networkInterfaces(),
-    ipAddresses = [];
+        interfaces = os.networkInterfaces(),
+        ipAddresses = [];
 
     for (var deviceName in interfaces){
         var addresses = interfaces[deviceName];
@@ -66,7 +66,7 @@ var getIPAddresses = function () {
 };
 
 var udpPort = new osc.UDPPort({
-   localAddress: "0.0.0.0",
+    localAddress: "0.0.0.0",
     localPort: 7400,
     remoteAddress: "127.0.0.1",
     remotePort: 7500
