@@ -410,11 +410,11 @@ body {
 }
 
 .song-button:active {
-    width: 64px !important;
     transition: all 0.2s ease-in;
-    background-color: #000;
+    background-color: rgb(103, 58, 183) !important;
+    color: #fff;
     background-size: 40px;
-    border-radius: 20px;
+    border-radius: 48px;
 }
 
 .menu-icon {
