@@ -46,8 +46,10 @@ function startup(app, page) {
         var bttn4 = 0;
         var bttn5 = 0;
         var bttn6 = 0;
-        
-        var socket = io.connect(window.location.hostname);
+
+        var socket = io(window.location.hostname);
+        //var socket = io.connect();
+        //var socket = io("http://localhost:5001");
         socket.on("connect", function () {
             document.getElementById("song-button-1").onclick = function () {
                 socket.emit("button_click_1");

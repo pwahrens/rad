@@ -4,17 +4,17 @@
  */
 var osc = require("osc");
 WebSocket = require("ws");
-var express = require("express");
-var socketIO = require("socket.io");
-var http = require("http").createServer(app);
-var io = require("socket.io")(http);
+var express = require('express');
 var http = require("http");
+var app = express();
+var server = http.createServer(app);
+var io = require('socket.io').listen(server);
 var fs = require("fs");
 var path = require("path");
 var mime = require("mime");
 var exec = require("child_process").exec
 
-var app = express();
+server.listen(5001);
 
 app.set('port', (process.env.PORT || 5000));
 
@@ -30,10 +30,6 @@ app.get('/', function (request, response) {
 
 app.listen(app.get('port'), function () {
     console.log('Node app is running on port', app.get('port'));
-});
-
-io.on('connection', function (socket) {
-    console.log("A user is connected");
 });
 
 function sendPage(response, filePath, fileContents) {
@@ -72,7 +68,7 @@ udpPort.on("ready", function () {
     var ipAddresses = getIPAddresses();
     console.log("Listening for OSC over UDP.");
     ipAddresses.forEach(function (address) {
-        console.log(" Host:", address + ", Port:", udpPort.options.localPort);
+        console.log("Host:", address + ", Port:", udpPort.options.localPort);
     });
     console.log("Broadcasting OSC over UDP to", udpPort.options.remoteAddress + ", Port:", udpPort.options.remotePort);
 });
@@ -102,8 +98,8 @@ var bttn4 = 0;
 var bttn5 = 0;
 var bttn6 = 0;
 
-
 io.sockets.on("connect", function (socket) {
+    console.log("A user is connected");
     socket.emit("connection_made");
     socket.on("button_click_1", function () {
         ++bttn1;
