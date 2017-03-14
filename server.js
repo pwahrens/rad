@@ -14,8 +14,8 @@ var path = require("path");
 var mime = require("mime");
 var exec = require("child_process").exec
 
-app.set('port', (process.env.PORT || 5000)); //website port TODO
-server.listen(app.get('port') + 1); //socket port needs to be different than website port? TODO
+app.set('port', (5000));
+server.listen(5001);
 
 app.use(express.static(__dirname + '/public'));
 

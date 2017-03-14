@@ -47,8 +47,7 @@ function startup(app, page) {
         var bttn5 = 0;
         var bttn6 = 0;
 
-        var port = window.location.port; //website port TODO
-        var socket = io(window.location.hostname+":"+ ++port); //socket port needs to be different than website port? TODO
+        var socket = io(window.location.hostname+":5001");
 
         socket.on("connect", function () {
             document.getElementById("song-button-1").onclick = function () {
