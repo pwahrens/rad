@@ -3,7 +3,6 @@
  Edited my miguel 3-10-2017
  */
 var osc = require("osc");
-//WebSocket = require("ws");
 var express = require('express');
 var http = require("http");
 var app = express();
@@ -11,7 +10,6 @@ var server = http.createServer(app);
 var io = require('socket.io').listen(server);
 var fs = require("fs");
 var path = require("path");
-var mime = require("mime");
 var exec = require("child_process").exec
 
 app.set('port', (5000));
@@ -30,11 +28,6 @@ app.get('/', function (request, response) {
 app.listen(app.get('port'), function () {
     console.log('Node app is running on port', app.get('port'));
 });
-
-function sendPage(response, filePath, fileContents) {
-    response.writeHead(200, {"Content-type": mime.lookup(path.basename(filePath))});
-    response.end(fileContents);
-}
 
 var getIPAddresses = function () {
     var os = require("os"),
@@ -75,22 +68,6 @@ udpPort.on("ready", function () {
 // Open the socket.
 udpPort.open();
 
-/*
-var wss = new WebSocket.Server({
-    port: 8080
-});
-
-wss.on("connection", function (socket) {
-    console.log("A Web Socket connection has been established!");
-    var socketPort = new osc.WebSocketPort({
-        socket: socket
-    });
-
-    var relay = new osc.Relay(udpPort, socketPort, {
-        raw: true
-    });
-});
-*/
 var bttn1 = 0;
 var bttn2 = 0;
 var bttn3 = 0;
