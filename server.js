@@ -24,24 +24,20 @@ app.use(express.static(__dirname + '/public'));
 app.set('views', __dirname + '/views');
 app.set('view engine', 'ejs');
 
-app.get('/', function(request, response) {
+app.get('/', function (request, response) {
     response.render('index');
 });
 
-app.listen(app.get('port'), function() {
+app.listen(app.get('port'), function () {
     console.log('Node app is running on port', app.get('port'));
 });
-
-
-
-//http.listen(8080, "127.0.0.1");
 
 io.on('connection', function (socket) {
     console.log("A user is connected");
 });
 
 function sendPage(response, filePath, fileContents) {
-    response.writeHead(200, {"Content-type" : mime.lookup(path.basename(filePath))});
+    response.writeHead(200, {"Content-type": mime.lookup(path.basename(filePath))});
     response.end(fileContents);
 }
 
@@ -50,7 +46,7 @@ var getIPAddresses = function () {
         interfaces = os.networkInterfaces(),
         ipAddresses = [];
 
-    for (var deviceName in interfaces){
+    for (var deviceName in interfaces) {
         var addresses = interfaces[deviceName];
 
         for (var i = 0; i < addresses.length; i++) {
