@@ -14,7 +14,7 @@ var path = require("path");
 var mime = require("mime");
 var exec = require("child_process").exec
 
-server.listen(5001);
+server.listen(process.env.PORT || 5000);
 
 app.set('port', (process.env.PORT || 5000));
 
