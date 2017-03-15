@@ -96,6 +96,9 @@ io.sockets.on("connect", function (socket) {
     socket.on("button_click_6", function () {
         ++bttn6;
     });
+    socket.on("disconnect", function () {
+        console.log("A user has disconnected");
+    });
 });
 
 // Every five seconds, send an OSC message to SuperCollider
