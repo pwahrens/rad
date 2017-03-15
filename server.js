@@ -108,7 +108,8 @@ setInterval(function () {
         args: [bttn1, bttn2, bttn3, bttn4, bttn5, bttn6]
     };
 
-    console.log("Option 1: " + bttn1 + "\n" + "Option 2: " + bttn2 + "\n" + "Option 3: " + bttn3 + "\n" + "Option 4: " + bttn4 + "\n" + "Tempo up: " + bttn1 + "\n" + "Tempo down: " + bttn1 + "\n");
+    console.log("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n");
+    console.log("Option 1: " + bttn1 + "\n" + "Option 2: " + bttn2 + "\n" + "Option 3: " + bttn3 + "\n" + "Option 4: " + bttn4 + "\n" + "Tempo up: " + bttn5 + "\n" + "Tempo down: " + bttn6 + "\n");
 
     var console_message = "";
     if (bttn1 > bttn2 && bttn1 > bttn3 && bttn1 > bttn4) {
