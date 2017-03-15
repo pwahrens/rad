@@ -111,7 +111,7 @@ setInterval(function () {
     console.log("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n");
     console.log("Option 1: " + bttn1 + "\n" + "Option 2: " + bttn2 + "\n" + "Option 3: " + bttn3 + "\n" + "Option 4: " + bttn4 + "\n" + "Tempo up: " + bttn5 + "\n" + "Tempo down: " + bttn6 + "\n");
 
-    var console_message = "";
+    var console_message = "Option WINNER: ";
     if (bttn1 > bttn2 && bttn1 > bttn3 && bttn1 > bttn4) {
         console_message+="1"
     } else if (bttn2 > bttn1 && bttn2 > bttn3 && bttn2 > bttn4) {
@@ -121,17 +121,17 @@ setInterval(function () {
     } else if (bttn4 > bttn1 && bttn4 > bttn2 && bttn4 > bttn3) {
         console_message+="4"
     } else {
-        console_message+="same pattern"
+        console_message+="tie"
     }
 
-    console_message+=" | "
+    console_message+="\nTempo WINNER: "
 
     if (bttn5 > bttn6) {
         console_message+="faster"
     } else if (bttn5 < bttn6) {
         console_message+="slower"
     } else {
-        console_message+="same tempo"
+        console_message+="tie"
     }
 
     console.log(console_message + "\n\n\n");
