@@ -108,8 +108,30 @@ setInterval(function () {
         args: [bttn1, bttn2, bttn3, bttn4, bttn5, bttn6]
     };
 
-    //console.log("Sending message", msg.address, msg.args, "to", udpPort.options.remoteAddress + ":" + udpPort.options.remotePort);
-    console.log(msg.args[0], msg.args[1], msg.args[2], msg.args[3], msg.args[4], msg.args[5]);
+    var console_message = "";
+    if (bttn1 > bttn2 && bttn1 > bttn3 && bttn1 > bttn4) {
+        console_message+="1"
+    } else if (bttn2 > bttn1 && bttn2 > bttn3 && bttn2 > bttn4) {
+        console_message+="2"
+    } else if (bttn3 > bttn1 && bttn3 > bttn2 && bttn3 > bttn4) {
+        console_message+="3"
+    } else if (bttn4 > bttn1 && bttn4 > bttn2 && bttn4 > bttn3) {
+        console_message+="4"
+    } else {
+        console_message+="same pattern"
+    }
+
+    console_message+=" | "
+
+    if (bttn5 > bttn6) {
+        console_message+="faster"
+    } else if (bttn5 < bttn6) {
+        console_message+="slower"
+    } else {
+        console_message+="same tempo"
+    }
+
+    console.log(console_message);
     udpPort.send(msg);
 
     //reset all button values
