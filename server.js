@@ -76,7 +76,7 @@ var bttn5 = 0;
 var bttn6 = 0;
 
 io.sockets.on("connect", function (socket) {
-    console.log("A user is connected");
+    console.log("A user has connected");
     socket.emit("connection_made");
     socket.on("button_click_1", function () {
         ++bttn1;
