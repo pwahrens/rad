@@ -109,9 +109,9 @@ setInterval(function () {
     };
 
     console.log("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n");
-    console.log("Option 1: " + bttn1 + "\n" + "Option 2: " + bttn2 + "\n" + "Option 3: " + bttn3 + "\n" + "Option 4: " + bttn4 + "\n" + "Tempo up: " + bttn5 + "\n" + "Tempo down: " + bttn6 + "\n");
+    console.log("Style 1: " + bttn1 + "\n" + "Style 2: " + bttn2 + "\n" + "Style 3: " + bttn3 + "\n" + "Style 4: " + bttn4 + "\n" + "Tempo up: " + bttn5 + "\n" + "Tempo down: " + bttn6 + "\n");
 
-    var console_message = "Option WINNER: ";
+    var console_message = "Style WINNER: ";
     if (bttn1 > bttn2 && bttn1 > bttn3 && bttn1 > bttn4) {
         console_message+="1"
     } else if (bttn2 > bttn1 && bttn2 > bttn3 && bttn2 > bttn4) {
