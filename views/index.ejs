@@ -7,7 +7,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/1.7.3/socket.io.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-    <script src="https://code.highcharts.com/highcharts.js"></script>
     <script src="http://students.engr.scu.edu/~pahrens/scripts.min.js"></script>
     <link rel="stylesheet" type="text/css" href="http://students.engr.scu.edu/~pahrens/styles.min.css"/>
 </head>
@@ -43,6 +42,43 @@
 <script>
     $(function () {
         startup("laptop-orchestra", "RAD");
+        var bttn1 = 0;
+        var bttn2 = 0;
+        var bttn3 = 0;
+        var bttn4 = 0;
+        var bttn5 = 0;
+        var bttn6 = 0;
+
+        var socket = io(window.location.hostname + ":5001");
+
+        socket.on("connect", function () {
+            document.getElementById("song-button-1").onclick = function () {
+                socket.emit("button_click_1");
+            }
+            document.getElementById("song-button-2").onclick = function () {
+                socket.emit("button_click_2");
+            }
+            document.getElementById("song-button-3").onclick = function () {
+                socket.emit("button_click_3");
+            }
+            document.getElementById("song-button-4").onclick = function () {
+                socket.emit("button_click_4");
+            }
+            document.getElementById("song-button-5").onclick = function () {
+                socket.emit("button_click_5");
+            }
+            document.getElementById("song-button-6").onclick = function () {
+                socket.emit("button_click_6");
+            }
+            socket.on("connection_made", function () {
+                document.getElementById("connection-status").style.backgroundColor = "#4CAF50";
+                document.getElementById("connection-status").textContent = "Connected";
+            });
+            socket.on('disconnect', function () {
+                document.getElementById("connection-status").style.backgroundColor = "#F44336";
+                document.getElementById("connection-status").textContent = "Not connected";
+            });
+        });
     });
 </script>
 </body>
