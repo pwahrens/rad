@@ -1,5 +1,4 @@
 # laptop-orchestra
-Node.js project for MUSC 157
 
 ## Instructions
 
