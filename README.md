@@ -1,4 +1,4 @@
-# RAD
+# rad
 
 ## About
 

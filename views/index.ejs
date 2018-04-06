@@ -5,41 +5,32 @@
     <title>RAD</title>
     <link rel="icon" href="favicon.png" type="image/png"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Arimo" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="styles.css"/>
 </head>
 <body>
-<div id="background" class="primary-color"></div>
-<div id="menu">
-    <div class="author">Paul Ahrens</div>
-    <div class="copyright">
-        <i class="icon-inner menu-icon material-icons">copyright</i>
-        <div class="copyright-text">2017 Paul Ahrens<br>All Rights Reserved</div>
+    <div id="container">
+        <div class="row">
+            <div id="connection-status" class="col-12">Not connected</div>
+            <div id="song-button-1" class="col-4 card primary-color song-button">Style 1</div>
+            <div id="song-button-2" class="col-4 card primary-color song-button">Style 2</div>
+            <div id="song-button-3" class="col-4 card primary-color song-button">Style 3</div>
+            <div id="song-button-4" class="col-4 card primary-color song-button">Style 4</div>
+            <div id="song-button-5" class="col-4 card primary-color song-button">Tempo up</div>
+            <div id="song-button-6" class="col-4 card primary-color song-button">Tempo down</div>
+        </div>
     </div>
-</div>
-<div id="cover"></div>
-<div id="menu-button" class="icon">
-    <i class="icon-inner material-icons md-light" title="Website directory">&#xE5D2;</i>
-</div>
-<div class="title-large"></div>
-<div id="top-shadow"></div>
-<div id="top-bar"></div>
-<div id="bottom-bar"></div>
-<div id="bottom-filler"></div>
-<div id="container">
-    <div class="row">
-        <div id="connection-status" class="col-12">Not connected</div>
-        <div id="song-button-1" class="col-4 card primary-color song-button">Style 1</div>
-        <div id="song-button-2" class="col-4 card primary-color song-button">Style 2</div>
-        <div id="song-button-3" class="col-4 card primary-color song-button">Style 3</div>
-        <div id="song-button-4" class="col-4 card primary-color song-button">Style 4</div>
-        <div id="song-button-5" class="col-4 card primary-color song-button">Tempo up</div>
-        <div id="song-button-6" class="col-4 card primary-color song-button">Tempo down</div>
+    <div id="background" class="primary-color"></div>
+    <div id="top-bar">
+        <div class="title-large"></div>
     </div>
-</div>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/1.7.3/socket.io.min.js"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-<script src="scripts.js"></script>
-<script>
+    <div id="top-shadow"></div>
+    <div id="bottom-filler"></div>
+    <div class="copyright">© 2018 Paul Ahrens, All Rights Reserved</div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/1.7.3/socket.io.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="scripts.js"></script>
+    <script>
     $(function () {
         startup("laptop-orchestra", "RAD");
         var bttn1 = 0;
