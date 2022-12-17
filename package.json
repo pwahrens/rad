@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "dependencies": {
     "osc": "2.2.x",
-    "express": "4.15.x",
+    "express": "4.17.x",
     "socket.io": "4.5.x",
     "yuicompressor": "2.4.x",
     "ejs": "2.5.x"
